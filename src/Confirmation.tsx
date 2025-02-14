@@ -1,9 +1,10 @@
+import Buttons from "./components/Buttons";
 import { useAttendeeDetailsStore } from "./store";
 
 const Confirmation = () => {
   const attendeeDetails = useAttendeeDetailsStore((state) => state.formData);
   return (
-    <div className="text-center text-white px-14">
+    <div className="px-2 text-center text-white md:px-14">
       <h1 className="text-[32px]">Your Ticket is Booked!</h1>
       <p>
         <span className="text-grey-98">
@@ -11,7 +12,7 @@ const Confirmation = () => {
         </span>
         download
       </p>
-      <div className="border border-[#0E464F] w-full rounded-3xl mt-4 p-10">
+      <div className="p-2 border-none md:border md:border-[#0E464F] w-full rounded-3xl mt-4 md:p-10">
         <div className="border border-[#0E464F] w-full rounded-3xl p-2">
           <h3 className="text-4xl text-center font-road-rage-regular font-normal text-white sm:text-[62px]">
             Techember Fest " 25
@@ -66,6 +67,14 @@ const Confirmation = () => {
           </div>
           <div className="my-10 border-2 border-dashed border-[#12464E]"></div>
         </div>
+      </div>
+      <div className="flex gap-2.5 flex-col-reverse sm:flex-row sm:gap-8 mt-7">
+        <Buttons variant="cancel" className="flex-1 border border-[#24A0B5]">
+          Book Another Ticket
+        </Buttons>
+        <Buttons variant="next" className="flex-1">
+          Download Ticket
+        </Buttons>
       </div>
     </div>
   );
