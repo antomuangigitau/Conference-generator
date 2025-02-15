@@ -12,7 +12,7 @@ const TicketAmout = () => {
       <h3 className="text-white mb-1">Number Of Tickets</h3>
       <div>
         <Select>
-          <SelectTrigger className="w-full border border-[#0E464F] rounded-3xl focus:ring-0 focus:ring-offset-0">
+          <SelectTrigger className="w-full text-white border border-[#0E464F] rounded-3xl focus:ring-0 focus:ring-offset-0">
             <SelectValue placeholder="1" />
           </SelectTrigger>
           <SelectContent>
