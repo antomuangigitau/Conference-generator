@@ -41,6 +41,14 @@ const TicketContainer = () => {
         </h3>
         <p>Step {currentStep}/3</p>
       </div>
+      <div className="w-full h-1 bg-[#0E464F] rounded-3xl mt-2">
+        <div
+          className="bg-[#24A0B5] h-1 rounded-3xl"
+          style={{
+            width:
+              currentStep === 1 ? "33.3%" : currentStep == 2 ? "66.6%" : "100%",
+          }}></div>
+      </div>
       {renderStep()}
     </div>
   );
